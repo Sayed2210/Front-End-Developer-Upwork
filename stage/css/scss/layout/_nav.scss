@@ -1,0 +1,90 @@
+/*nav bar*/
+.nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #F75C29;
+    position: relative;
+        .container {
+        @include flex-between;
+            label,
+            input[type="checkbox"],
+            .menu-bar {
+                display: none;
+            }
+            .logo {
+                @include flex;
+                align-items: center;
+                img {
+                    width: 45px;
+                    margin-right: 5px;
+                }
+            }
+            .links {
+                a {
+                    padding: 25px;
+                    color: #005CDE;
+                    text-decoration: none;
+                    opacity: 0.8;
+                    @include smooth;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+}
+@include smScreen {
+    .nav  {
+        .container {
+            .links {
+                display: none;
+            }
+            label {
+                display: block;
+                color: #005CDE;
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+                border: 2px solid #fff;
+            }
+            input[type="checkbox"]:checked +.menu-bar {
+                display: flex;
+                bottom: -221px;
+            }
+            .menu-bar {
+                display: none;
+                position: absolute;
+                background-color: #005CDE;
+                flex-direction: column;
+                width: 90%;
+                justify-content: center;
+                text-align: center;
+                bottom: -220px;
+                -o-transition: 0.3s;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                transition: 0.3s;
+            }
+            .menu-bar {
+                a {
+                    padding: 25px;
+                    font-family: satisfy;
+                    color: #fff;
+                    text-decoration: none;
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+                }
+        }
+    }
+}

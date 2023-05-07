@@ -1,0 +1,28 @@
+.bullets {
+    position: fixed;
+    right: 15px;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    li {
+        width: 15px;
+        height: 15px;
+        background-color: #cecece;
+        border: 1px solid #fff;
+        outline: 1px solid #cecece;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        margin-bottom: 5px;
+        &:nth-child(3) {
+            background-color: #F75C29;
+            outline-color: #F75C29;
+        }
+    }
+}
+

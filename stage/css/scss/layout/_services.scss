@@ -1,0 +1,38 @@
+.services  {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FCFCFC;
+    .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        gap: 20px;
+        .box {
+            text-align: center;
+            .image {
+                position: relative;
+                padding: 5px;
+                margin-bottom: 10px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 65px;
+                    left: 50%;
+                    transform: translate(-50%, -65%);
+                    height: 50px;
+                    width: 100px;
+                    border-radius: 150px 150px 0 0;
+                    background-color: #92cbdf;
+                    opacity: .6;
+                }
+            }
+            h6 {
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media (max-width: 769px) {
+    .services .content {
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    }
+}

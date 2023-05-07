@@ -1,0 +1,72 @@
+.landing-section {
+    position: relative;
+    background-image: url(../imgs/Group\ 1630.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    .container {
+        .content{
+            @include flex-between;
+            .image {
+                width: 40%;
+            }
+            .info {
+                .headlines {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 3px;
+                        background-color: #F75C29;
+                        width: 70px;
+                        left: 0;
+                        bottom: -20px;
+                    }
+                    h2:first-of-type {
+                        font-weight: bold;
+                        color: #FF0000;
+                    }
+                    h2:last-of-type {
+                        font-weight: bold;
+                        color: #005CDE;
+                        margin-bottom: 30px;
+                    }
+                }
+                .text {
+                    margin-bottom: 25px;
+                }
+                .download {
+                    h6 {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+@include smScreen {
+    .landing-section {
+        .content{
+            justify-content: center !important;
+            text-align: center;
+            padding-bottom: 25px;
+            .image {
+                display: none;
+            }
+            .info {
+                max-width: 400px;
+                .headlines {
+                    &::before {
+                        left: 50% !important;
+                        -o-transform: translateX(-50%) !important;
+                        -webkit-transform: translateX(-50%) !important;
+                        -moz-transform: translateX(-50%) !important;
+                        -ms-transform: translateX(-50%) !important;
+                        transform: translateX(-50%) !important;
+                    }
+                }
+            }
+        }
+    }
+}

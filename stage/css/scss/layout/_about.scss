@@ -1,0 +1,41 @@
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .content {
+        @include flex-between;
+        .info {
+            width: 48%;
+            .main-title {
+                text-align: left;
+                &::before {
+                    left: 50px;
+                }
+            }
+            p {
+                margin-bottom: 30px;
+            }
+        }
+        img {
+            width: 50%;
+        }
+    }
+}
+@include smScreen {
+    .about {
+        .content {
+            .info {
+                width: 100%;
+                text-align: center;
+                .main-title {
+                    text-align: center;
+                    &::before {
+                        left: 50% !important;
+                    }
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+}

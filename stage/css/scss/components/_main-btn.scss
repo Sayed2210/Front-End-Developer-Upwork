@@ -1,0 +1,15 @@
+.main-btn {
+    background: rgb(247,92,41);
+    background: linear-gradient(180deg, rgba(247,92,41,1) 0%, rgba(200,56,9,1) 100%);
+    color: #fff !important;
+    padding: 5px 15px !important;
+    border: 2px solid #C83809;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    svg {
+    color: #fff !important;
+    }
+}
