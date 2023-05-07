@@ -1,0 +1,61 @@
+.digit-section {
+    padding: 50px 0;
+    background-color: #FCFCFC;
+    .container {
+            .box {
+                background-color: #fff;
+                box-shadow: 6px 6px 15px #00000014;
+                padding: 25px 15px;
+                position: relative;
+                &::before {
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    -o-transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    width: 70%;
+                    height: 3px;
+                    background-color: $orange-color;
+                    position: absolute;
+                }
+                .images {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+                    img:last-of-type {
+                        position: relative;
+                        right: -50px;
+                    }
+                }
+                h4 {
+                    color: #005CDE;
+                }
+                p {
+                    max-width: 250px;
+                    margin-bottom: 25px;
+                }
+            }
+            .carousel {
+                .carousel-indicators {
+                    bottom: -55px;
+                    button {
+                        width: 15px;
+                            height: 15px;
+                            background-color: #cecece;
+                            border: 1px solid #fff;
+                            outline: 1px solid #cecece;
+                            border-radius: 50%;
+                            margin-bottom: 5px;
+                            &.active {
+                                background-color: #F75C29;
+                                outline-color: #F75C29;
+                            }
+                        }
+                    }
+                }
+            }
+        }

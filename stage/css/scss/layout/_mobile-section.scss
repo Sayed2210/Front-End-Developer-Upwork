@@ -1,0 +1,57 @@
+/*mobile section*/
+.mobile-section {
+    padding: 50px 0;
+    .container {
+        .content {
+            @include flex-between;
+            .info {
+                .main-title {
+                    text-align: left;
+                    &::before {
+                        left: 50px;
+                    }
+                }
+                .text {
+                    margin-bottom: 45px;
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        margin-bottom: 10px;
+                        i {
+                            color: rgb(247, 92, 41);
+                        }
+                    }
+                }
+                .download {
+                    h4 {
+                        color: #005CDE;
+                        margin-top: 50px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+@include smScreen {
+    .mobile-section {
+        .container {
+            .content {
+                flex-direction: column;
+                text-align: center !important;
+                .info {
+                    .main-title {
+                        text-align: center;
+                        &::before {
+                            left: 50%;
+                        }
+                    }
+                    p {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

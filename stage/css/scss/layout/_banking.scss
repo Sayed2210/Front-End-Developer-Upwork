@@ -1,0 +1,99 @@
+.architecture {
+    padding: 50px 0;
+    background-color: #FCFCFC;
+    .container {
+        position: relative;
+        h2 {
+            position: absolute;
+            background-color: white;
+            z-index: 100;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            border: 3px dashed #005CDE;
+            padding: 15px 25px;
+            -webkit-border-radius: 70px;
+            -moz-border-radius: 70px;
+            -ms-border-radius: 70px;
+            -o-border-radius: 70px;
+            border-radius: 70px;
+            font-weight: bold;
+            font-size: 1.6rem;
+            &:first-of-type {
+                top: -32px;
+            }
+            &:last-of-type {
+                bottom: -32px;
+                font-size: 1.2rem;
+            }
+            span {
+                color: #005CDE;
+            }
+        }
+        .content {
+            text-align: center;
+            border: 3px dashed #005CDE;
+            -webkit-border-radius: 70px;
+            -moz-border-radius: 70px;
+            -ms-border-radius: 70px;
+            -o-border-radius: 70px;
+            border-radius: 70px;
+            position: relative;
+            padding: 100px 45px;
+            @include flex-between;
+            .box {
+                padding: 10px;
+                i {
+                    font-size: 3.5rem;
+                    color: #777;
+                    margin-bottom: 15px;
+                }
+                p {
+                    padding: 5px 10px;
+                    border: 1px solid #777;
+                    font-size: .7rem;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+@include smScreen {
+    .architecture {
+        padding: 50px 10px;
+        .container{
+            h2 {
+                font-size: .6rem !important;
+                &:first-of-type {
+                    top: -26px;
+                }
+                &:last-of-type {
+                    bottom: -36px;
+                }
+            }
+            .content {
+                flex-wrap: wrap;
+                .box {
+                    width: 48%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+@include xsScreen {
+    .architecture {
+        .container {
+            .content {
+                flex-direction: column;
+            }
+            .box {
+                width: 100% !important;
+            }
+        }
+    }
+}
+

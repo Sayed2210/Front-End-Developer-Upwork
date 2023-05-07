@@ -1,0 +1,56 @@
+/*credit section*/
+.credit-section {
+    padding: 50px 0;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            padding: 15px;
+            width: 40%;
+        }
+        .info {
+            width: 40%;
+            h6 {
+                color: #052F5F;
+                margin-bottom: 15px;
+                font-weight: bold
+            }
+            p {
+                @include flex;
+                align-items: center;
+                gap: 5px;
+                i {
+                    color: rgb(247, 92, 41);
+                }
+            }
+        }
+    }
+}
+@include smScreen {
+    .credit-section {
+        .content {
+            &:nth-child(2) {
+                flex-direction: column-reverse;
+            }
+            flex-direction: column;
+            text-align: center;
+            .info {
+                width: 100%;
+                text-align: center;
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@include xsScreen {
+    .credit-section {
+        .content {
+            img {
+                width: 80%;
+            }
+        }
+    }
+}

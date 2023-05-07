@@ -10,6 +10,7 @@
             width: 250px;
             border: 5px solid;
             padding: 15px;
+            position: relative;
             @include flex-center;
             &:nth-child(1),
             &:nth-child(3) {
@@ -18,6 +19,85 @@
             &:nth-child(2),
             &:nth-child(4) {
                 border-color: $orange-color;
+            }
+            &:not(:first-child)::before,
+            &:not(:last-child)::after {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 3px solid;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:not(:last-child):after {
+                right: -13px;
+            }
+            &:not(:first-child)::before {
+                left: -13px;
+            }
+            &:nth-child(1):after,
+            &:nth-child(3):after ,
+            &:nth-child(1)::before,
+            &:nth-child(3)::before {
+                border-color: #005CDE;
+            }
+            &:nth-child(2):after,
+            &:nth-child(2)::before,
+            &:nth-child(4)::before {
+                border-color: #F75C29;
+            }
+            > div {
+                &:before {
+                    content: "";
+                    width: 34px;
+                    background-color: #005cde;
+                    height: 4px;
+                    position: absolute;
+                    right: -37px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+@include smScreen {
+    .loan {
+        .container {
+            .content {
+                flex-direction: column;
+                .box {
+                    margin-bottom: 15px;
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                    > div {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1080px) {
+    .loan {
+        .container {
+            .content {
+                .box {
+                    height: 220px;
+                    width: 220px;
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                    > div {
+                        display: none;
+                    }
+                }
             }
         }
     }
