@@ -32,3 +32,20 @@ $(document).ready(function(){
     }
   })
 });
+//select bullets
+let bullets = Array.from(document.querySelectorAll(".bullets li"));
+//loop on all bulets
+bullets.forEach(bullet => {
+    //add function to bullets
+    bullet.addEventListener("click",(e)=>{
+        bullets.forEach((e)=>{
+            e.classList.remove('active');
+        })
+        e.currentTarget.classList.add("active")
+        document.querySelector(e.currentTarget.dataset.section).scrollIntoView(
+            {
+                behavier: "smooth"
+            }
+        )
+    })
+})

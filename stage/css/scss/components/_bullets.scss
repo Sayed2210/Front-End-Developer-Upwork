@@ -7,6 +7,7 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+    z-index: 1000;
     li {
         width: 15px;
         height: 15px;
@@ -19,9 +20,34 @@
         -o-border-radius: 50%;
         border-radius: 50%;
         margin-bottom: 5px;
+        position: relative;
         &:nth-child(3) {
-            background-color: #F75C29;
-            outline-color: #F75C29;
+            background-color: #cecece; 
+            outline-color: #cecece; 
+        }
+        &:hover .hints{
+            display: block;
+        }
+        &.active {
+            background-color: $orange-color;
+            outline-color: $orange-color;
+        }
+        .hints{
+        position: absolute;
+        display: none;
+        right: 30px;
+        top: -1px;
+        width: 120px;
+        padding: 2px 4px;
+        background-color: $orange-color;
+        color: #fff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px;
+        text-align: center;
+        transition: 0.3s;
         }
     }
 }

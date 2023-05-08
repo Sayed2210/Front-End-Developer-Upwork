@@ -17,6 +17,7 @@
                     img(src='imgs/Mask Group 12.png' alt='')
                     img(src='imgs/Mask Group 13.png' alt='')
     ul.bullets.list-unstyled 
-        -var i=['','','','','']
+        -var i=['services','about','loan','credit-section','architecture','mobile-section','digit-section','testimonials']
         each val in i 
-            li                         
+            li(data-section="." + val)
+                .hints=val 
