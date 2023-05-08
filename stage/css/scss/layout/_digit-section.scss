@@ -2,10 +2,11 @@
     padding: 50px 0;
     background-color: #FCFCFC;
     .container {
+        .owl-one {
             .box {
                 background-color: #fff;
                 box-shadow: 6px 6px 15px #00000014;
-                padding: 25px 15px;
+                padding: 35px 25px;
                 position: relative;
                 &::before {
                     content: '';
@@ -26,9 +27,13 @@
                     align-items: center;
                     justify-content: space-between;
                     margin-bottom: 15px;
-                    img:last-of-type {
-                        position: relative;
-                        right: -50px;
+                    padding: 10px 15px;
+                    img {
+                        width: 90px;
+                        &:last-of-type {
+                            position: relative;
+                            right: -50px;
+                        }
                     }
                 }
                 h4 {
@@ -39,23 +44,6 @@
                     margin-bottom: 25px;
                 }
             }
-            .carousel {
-                .carousel-indicators {
-                    bottom: -55px;
-                    button {
-                        width: 15px;
-                            height: 15px;
-                            background-color: #cecece;
-                            border: 1px solid #fff;
-                            outline: 1px solid #cecece;
-                            border-radius: 50%;
-                            margin-bottom: 5px;
-                            &.active {
-                                background-color: #F75C29;
-                                outline-color: #F75C29;
-                            }
-                        }
-                    }
-                }
-            }
         }
+    }
+}

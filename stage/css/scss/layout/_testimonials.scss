@@ -1,0 +1,51 @@
+/*testimonials*/
+.testimonials {
+    padding: 50px 0;
+    background-color: #FCFCFC;
+    .container {
+        .owl-two {
+            .box {
+                background-color: #fff;
+                box-shadow: 6px 6px 15px #00000014;
+                position: relative;
+                padding: 15px 25px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    width: 250px;
+                    height: 3px;
+                    background-color: #F75C29;
+                    bottom: 0;
+                }
+                p {
+                    line-height: 1.8;
+                    text-align: left;
+                }
+                .client {
+                    @include flex-between;
+                    .user {
+                        @include flex;
+                        justify-content: space-between;
+                        img {
+                            margin-right: 25px;
+                            width: 45px;
+                            height: 45px;
+                        }
+                        h4 {
+                            color: $blue-color;
+                        }
+                    }
+                    img {
+                        width: 45px;
+                    }
+                }
+            }
+        }
+    }    
+}
