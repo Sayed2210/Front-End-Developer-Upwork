@@ -7,3 +7,6 @@ img {
 a{
     text-decoration: none;
 }
+.comingsoon {
+    @include felx-center;
+}
